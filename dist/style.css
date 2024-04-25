@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'Comfortaa', sans-serif;
+}
+
+body{
+    /* From https://css.glass */
+  background: rgba(0, 145, 255, 0.925);
+    font-family: 'Comfortaa', sans-serif;
+    color: black;
+    
+}
+header{
+  text-align: center;
+}
+
+.nav {
+  display: inline-flex;
+  position: relative;
+  overflow: hidden;
+  max-width: 100%;
+  background-color: #fff;
+  margin:20px;
+  padding: 0 20px;
+  border-radius: 40px;
+  box-shadow: 0 10px 40px rgba(159, 162, 177, .8);
+}
+
+.nav-item {
+  color: #83818c;
+  padding: 20px;
+  text-decoration: none;
+  transition: .3s;
+  margin: 0 6px;
+  z-index: 1;
+  font-weight: 500;
+  position: relative;
+  
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #dfe2ea;
+    border-radius: 8px 8px 0 0;
+    opacity: 0;
+    transition: .3s;
+  }
+}
+
+.nav-item:not(.is-active):hover:before {
+  opacity: 1;
+  bottom: 0;
+}
+
+.nav-item:not(.is-active):hover { color: #333; background-color: #2a06f846; }
+
+.nav-indicator {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  transition: .4s;
+  height: 5px;
+  z-index: 1;
+  border-radius: 8px 8px 0 0;
+}
+
+@media (max-width: 580px) {
+  .nav { overflow: auto; }
+}
+
+.container-about{
+  margin:auto 20%;
+  display:flex;
+  justify-content:initial;
+  align-items: center;
+  gap:5%;
+}
+
+.avatar{
+  border-radius: 4px 112px 54px 112px;
+  min-width: 15vw;
+  max-width: 40vw;
+  width: 300px;
+}
+
+footer{
+    width: 100%;
+    background: #EEEEEE;
+    padding: 23px 23px;
+    text-align: center;
+    font-size: 14px;
+    color: #999999;
+}
+
+
+
+.rede_social {
+  display:flex;
+  position: relative;
+  top: 40%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+
+
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  background: #e59500;
+  margin: 10px 0;
+  cursor: pointer;
+  border-radius: 3px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+ul li .fa {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 20px;
+  color: #fff;
+}
+
+ul li.instagram{
+  background: #bc2a8d;
+}
+
+ul li.whatsapp{
+  background: #4dc247;
+}
+
+ul li.instagram div.slider{
+  background: #dd94c6;
+}
+  
+ul li.whatsapp div.slider{
+  background: #82d47e;
+}
+
+.slider {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 51px;
+  width: 0px;
+  height: 50px;
+  background: #eebb5c;
+  border-radius: 3px;
+  transition: all 0.5s 0.3s ease;
+}
+
+.slider p {
+  font-family: arial;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+  line-height: 25px;
+  opacity: 0;
+  transition: all 0.6s ease;
+}
+
+ul li:hover .slider {
+  width: 180px;
+  transition: all 0.5s ease;
+}
+
+ul li:hover .slider p {
+  opacity: 1;
+  transition: all 1s 0.2s ease;
+}
+}
